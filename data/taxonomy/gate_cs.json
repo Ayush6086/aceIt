@@ -1,0 +1,206 @@
+{
+  "syllabus": "GATE 2027",
+  "source_file": "CS_GATE2027_Syllabus.pdf",
+  "paper": "CS",
+  "note": "Names are taken from the official syllabus text. 'derived': true marks a grouping label that is not in the syllabus wording. 'source': 'general-gate' marks content that is NOT in the provided PDF (General Aptitude) and must be verified. Aliases are the free-text words students type when they ask for a test by topic name.",
+  "subjects": [
+    {
+      "name": "Engineering Mathematics",
+      "topics": [
+        {"name": "Discrete Mathematics", "aliases": ["discrete math", "discrete maths", "dm"], "subtopics": [
+          {"name": "Propositional and first order logic", "aliases": ["logic", "propositional logic", "first order logic", "fol", "predicate logic"]},
+          {"name": "Sets, relations, functions, partial orders and lattices", "aliases": ["set theory", "relations", "functions", "posets", "partial orders", "lattices"]},
+          {"name": "Monoids, Groups", "aliases": ["groups", "group theory", "monoids", "algebraic structures"]},
+          {"name": "Graphs: connectivity, matching, colouring", "aliases": ["graph theory", "graph coloring", "graph colouring", "matching", "connectivity"]},
+          {"name": "Combinatorics: counting, recurrence relations, generating functions", "aliases": ["combinatorics", "counting", "permutations and combinations", "recurrence relations", "generating functions"]}
+        ]},
+        {"name": "Linear Algebra", "aliases": ["linear algebra", "la"], "subtopics": [
+          {"name": "Matrices, determinants, system of linear equations", "aliases": ["matrices", "determinants", "linear equations", "system of equations"]},
+          {"name": "eigenvalues and eigenvectors", "aliases": ["eigenvalues", "eigenvectors", "eigen values", "eigen vectors"]},
+          {"name": "LU decomposition", "aliases": ["lu decomposition", "lu factorization"]}
+        ]},
+        {"name": "Calculus", "aliases": ["calculus"], "subtopics": [
+          {"name": "Limits, continuity and differentiability", "aliases": ["limits", "continuity", "differentiability"]},
+          {"name": "Maxima and minima", "aliases": ["maxima", "minima", "optimization of functions"]},
+          {"name": "Mean value theorem", "aliases": ["mvt", "mean value theorem"]},
+          {"name": "Integration", "aliases": ["integration", "integrals"]}
+        ]},
+        {"name": "Probability and Statistics", "aliases": ["probability", "statistics", "prob and stats"], "subtopics": [
+          {"name": "Random variables", "aliases": ["random variable", "expectation", "variance"]},
+          {"name": "Uniform, normal, exponential, Poisson and binomial distributions", "aliases": ["distributions", "normal distribution", "poisson", "binomial", "exponential distribution", "uniform distribution"]},
+          {"name": "Mean, median, mode and standard deviation", "aliases": ["mean median mode", "standard deviation", "descriptive statistics"]},
+          {"name": "Conditional probability and Bayes theorem", "aliases": ["conditional probability", "bayes theorem", "bayes rule"]}
+        ]}
+      ]
+    },
+    {
+      "name": "Digital Logic",
+      "topics": [
+        {"name": "Boolean algebra and minimization", "aliases": ["boolean algebra", "boolean minimization", "logic minimization"], "subtopics": [
+          {"name": "algebraic technique", "aliases": ["boolean simplification"]},
+          {"name": "Karnaugh map", "aliases": ["k map", "k-map", "kmap", "karnaugh"]},
+          {"name": "tabular method", "aliases": ["quine mccluskey", "quine-mccluskey", "tabulation method"]}
+        ]},
+        {"name": "Design of combinational and sequential circuits", "aliases": ["combinational circuits", "sequential circuits", "flip flops", "flip-flops", "counters", "registers", "multiplexer", "decoder", "adder"]},
+        {"name": "Number representation and arithmetic", "aliases": ["number systems", "number representation", "twos complement", "2's complement"], "subtopics": [
+          {"name": "fixed and floating point", "aliases": ["floating point", "fixed point", "ieee 754", "floating point representation"]}
+        ]}
+      ]
+    },
+    {
+      "name": "Computer Organization and Architecture",
+      "topics": [
+        {"name": "Instruction set and addressing modes", "aliases": ["instruction set", "addressing modes", "isa", "instruction formats"]},
+        {"name": "Design of arithmetic and logic unit (ALU)", "aliases": ["alu", "arithmetic logic unit"]},
+        {"name": "Design of control unit", "aliases": ["control unit"], "subtopics": [
+          {"name": "hardwired", "aliases": ["hardwired control"]},
+          {"name": "microprogrammed", "aliases": ["microprogrammed control", "microprogramming", "microinstructions"]}
+        ]},
+        {"name": "Memory interfacing and hierarchy", "aliases": ["memory hierarchy", "memory interfacing", "memory organization"], "subtopics": [
+          {"name": "performance", "aliases": ["memory performance", "average memory access time", "amat"]},
+          {"name": "cache memory mapping", "aliases": ["cache", "cache memory", "cache mapping", "direct mapped cache", "set associative cache"]}
+        ]},
+        {"name": "I/O interface (interrupt and DMA)", "aliases": ["io interface", "i/o", "interrupts", "interrupt", "dma", "direct memory access"]},
+        {"name": "Instruction pipelining, pipeline hazards", "aliases": ["pipelining", "pipeline", "pipeline hazards", "hazards", "data hazards"]}
+      ]
+    },
+    {
+      "name": "Programming and Data Structures",
+      "topics": [
+        {"name": "Programming in C", "aliases": ["c programming", "c language", "pointers", "c output questions", "programming"]},
+        {"name": "Recursion", "aliases": ["recursion", "recursive functions"]},
+        {"name": "Data structures", "derived": true, "aliases": ["data structures", "ds"], "subtopics": [
+          {"name": "Arrays", "aliases": ["array"]},
+          {"name": "stacks", "aliases": ["stack"]},
+          {"name": "queues", "aliases": ["queue", "circular queue"]},
+          {"name": "linked lists", "aliases": ["linked list", "singly linked list", "doubly linked list"]},
+          {"name": "trees", "aliases": ["tree", "binary tree", "tree traversal"]},
+          {"name": "binary search trees", "aliases": ["bst", "binary search tree", "avl tree"]},
+          {"name": "binary heaps", "aliases": ["heap", "heaps", "binary heap", "priority queue"]},
+          {"name": "graphs", "aliases": ["graph representation", "adjacency list", "adjacency matrix"]}
+        ]}
+      ]
+    },
+    {
+      "name": "Algorithms",
+      "topics": [
+        {"name": "Searching", "aliases": ["binary search", "linear search", "searching"]},
+        {"name": "sorting", "aliases": ["sorting", "quick sort", "quicksort", "merge sort", "mergesort", "heap sort", "heapsort", "sorting algorithms"]},
+        {"name": "hashing", "aliases": ["hashing", "hash table", "hash tables", "collision resolution"]},
+        {"name": "Asymptotic worst case time and space complexity", "aliases": ["time complexity", "space complexity", "asymptotic analysis", "big o", "big-o", "complexity analysis", "recurrence"]},
+        {"name": "Algorithm design techniques", "aliases": ["algorithm design", "design techniques"], "subtopics": [
+          {"name": "greedy", "aliases": ["greedy algorithm", "greedy algorithms", "huffman coding", "huffman"]},
+          {"name": "dynamic programming", "aliases": ["dp", "dynamic programing", "knapsack", "lcs", "longest common subsequence"]},
+          {"name": "divide-and-conquer", "aliases": ["divide and conquer", "d&c", "master theorem"]}
+        ]},
+        {"name": "Graph algorithms", "derived": true, "aliases": ["graph algorithms"], "subtopics": [
+          {"name": "Graph traversals", "aliases": ["bfs", "dfs", "breadth first search", "depth first search", "graph traversal"]},
+          {"name": "minimum spanning trees", "aliases": ["mst", "minimum spanning tree", "prim", "prims", "kruskal"]},
+          {"name": "shortest paths", "aliases": ["shortest path", "dijkstra", "bellman ford", "bellman-ford", "floyd warshall", "floyd-warshall"]}
+        ]}
+      ]
+    },
+    {
+      "name": "Theory of Computation",
+      "topics": [
+        {"name": "Regular expressions and finite automata", "aliases": ["regular expressions", "regex", "finite automata", "dfa", "nfa", "automata", "fa"]},
+        {"name": "Context-free grammars and push-down automata", "aliases": ["cfg", "context free grammar", "context-free grammar", "pda", "pushdown automata", "push down automata"]},
+        {"name": "Regular and context-free languages, pumping lemma", "aliases": ["pumping lemma", "regular languages", "context free languages", "cfl", "closure properties"]},
+        {"name": "Turing machines and undecidability", "aliases": ["turing machine", "turing machines", "undecidability", "decidability", "halting problem", "tm"]}
+      ]
+    },
+    {
+      "name": "Compiler Design",
+      "topics": [
+        {"name": "Lexical analysis", "aliases": ["lexical analyzer", "lexer", "tokens", "scanner"]},
+        {"name": "parsing", "aliases": ["parsing", "parser", "ll1", "ll(1)", "lr parsing", "slr", "lalr", "clr", "first and follow", "top down parsing", "bottom up parsing"]},
+        {"name": "syntax-directed translation", "aliases": ["sdt", "syntax directed translation", "syntax directed definition", "sdd"]},
+        {"name": "Runtime environments", "aliases": ["runtime environment", "activation records", "stack allocation", "symbol table"]},
+        {"name": "Intermediate code generation", "aliases": ["intermediate code", "three address code", "tac", "icg"]},
+        {"name": "Local optimisation", "aliases": ["local optimization", "code optimization", "optimisation", "basic blocks", "peephole"]},
+        {"name": "Data flow analyses", "aliases": ["data flow analysis", "dataflow analysis"], "subtopics": [
+          {"name": "constant propagation", "aliases": ["constant folding"]},
+          {"name": "liveness analysis", "aliases": ["live variable analysis", "live variables"]},
+          {"name": "common sub expression elimination", "aliases": ["cse", "common subexpression elimination"]}
+        ]}
+      ]
+    },
+    {
+      "name": "Operating System",
+      "topics": [
+        {"name": "System calls", "aliases": ["system call", "syscalls", "fork", "exec"]},
+        {"name": "processes", "aliases": ["process", "process management", "process states", "pcb"]},
+        {"name": "threads", "aliases": ["thread", "multithreading", "user level threads", "kernel level threads"]},
+        {"name": "inter-process communication", "aliases": ["ipc", "interprocess communication", "pipes", "message passing", "shared memory"]},
+        {"name": "concurrency and synchronization", "aliases": ["synchronization", "synchronisation", "semaphore", "semaphores", "mutex", "monitors", "critical section", "race condition", "producer consumer", "readers writers", "dining philosophers", "concurrency"]},
+        {"name": "Deadlock", "aliases": ["deadlock", "deadlocks", "bankers algorithm", "banker's algorithm", "resource allocation graph", "deadlock avoidance"]},
+        {"name": "CPU and I/O scheduling", "aliases": ["cpu scheduling", "scheduling", "process scheduling", "fcfs", "sjf", "round robin", "disk scheduling", "io scheduling"]},
+        {"name": "Memory management and virtual memory", "aliases": ["memory management", "virtual memory", "paging", "segmentation", "page replacement", "page fault", "tlb", "thrashing", "demand paging"]},
+        {"name": "File systems", "aliases": ["file system", "file systems", "inode", "disk allocation", "fat"]}
+      ]
+    },
+    {
+      "name": "Databases",
+      "topics": [
+        {"name": "ER-model", "aliases": ["er model", "er diagram", "e-r model", "entity relationship", "er diagrams"]},
+        {"name": "Relational model", "aliases": ["relational model"], "subtopics": [
+          {"name": "relational algebra", "aliases": ["relational algebra", "joins", "natural join"]},
+          {"name": "tuple calculus", "aliases": ["relational calculus", "trc", "tuple relational calculus"]},
+          {"name": "SQL", "aliases": ["sql", "sql queries", "queries", "group by", "nested queries"]}
+        ]},
+        {"name": "Integrity constraints", "aliases": ["integrity constraints", "constraints", "foreign key", "primary key", "keys"]},
+        {"name": "normal forms", "aliases": ["normalization", "normalisation", "normal form", "1nf", "2nf", "3nf", "bcnf", "functional dependency", "functional dependencies", "fd"]},
+        {"name": "File organization", "aliases": ["file organisation", "file organization", "records and blocks"]},
+        {"name": "indexing", "aliases": ["indexing", "index", "indexes"], "subtopics": [
+          {"name": "B and B+ trees", "aliases": ["b tree", "b+ tree", "b trees", "b+ trees", "btree", "b plus tree"]}
+        ]},
+        {"name": "Transactions and concurrency control", "aliases": ["transactions", "transaction", "concurrency control", "serializability", "conflict serializability", "two phase locking", "2pl", "acid", "schedules", "recovery"]}
+      ]
+    },
+    {
+      "name": "Computer Networks",
+      "topics": [
+        {"name": "Principles of Layering", "aliases": ["layering", "osi model", "tcp/ip model", "protocol layers", "network layers"]},
+        {"name": "Basics of switching", "aliases": ["switching"], "subtopics": [
+          {"name": "circuit", "aliases": ["circuit switching"]},
+          {"name": "packet", "aliases": ["packet switching"]},
+          {"name": "virtual circuit", "aliases": ["virtual circuit switching"]}
+        ]},
+        {"name": "performance metrics", "aliases": ["network performance", "throughput", "latency", "bandwidth delay product", "delay", "propagation delay", "transmission delay"]},
+        {"name": "Data link layer", "aliases": ["data link", "dll", "framing", "sliding window", "stop and wait", "go back n", "selective repeat"], "subtopics": [
+          {"name": "error detection", "aliases": ["crc", "checksum", "hamming code", "parity", "error correction"]},
+          {"name": "Medium Access Control", "aliases": ["mac", "csma", "csma/cd", "aloha", "medium access"]},
+          {"name": "Ethernet", "aliases": ["ethernet", "lan", "switches", "bridges"]}
+        ]},
+        {"name": "Distance vector and link state routing", "aliases": ["routing", "distance vector", "link state", "rip", "ospf", "routing algorithms"]},
+        {"name": "IPv4", "aliases": ["ipv4", "ip address", "ip addressing", "subnetting", "subnet", "ip"], "subtopics": [
+          {"name": "Fragmentation", "aliases": ["ip fragmentation", "mtu"]},
+          {"name": "CIDR Notation", "aliases": ["cidr", "classless addressing", "supernetting"]},
+          {"name": "Network Address Translation", "aliases": ["nat"]}
+        ]},
+        {"name": "TCP", "aliases": ["tcp", "transport layer", "udp"], "subtopics": [
+          {"name": "flow control and congestion control", "aliases": ["flow control", "congestion control", "tcp congestion", "slow start", "tcp windows"]},
+          {"name": "socket API", "aliases": ["sockets", "socket programming", "socket"]}
+        ]},
+        {"name": "DNS and HTTP", "aliases": ["dns", "http", "application layer", "web", "smtp", "email"]}
+      ]
+    },
+    {
+      "name": "Out of Current Syllabus",
+      "source": "general-gate",
+      "topics": [
+        {"name": "Software Engineering", "source": "general-gate", "aliases": ["software engineering", "waterfall model", "sdlc", "software testing", "software process"]}
+      ]
+    },
+    {
+      "name": "General Aptitude",
+      "source": "general-gate",
+      "topics": [
+        {"name": "Verbal Ability", "source": "general-gate", "aliases": ["verbal", "english", "grammar", "sentence completion", "verbal analogies", "critical reasoning", "word groups"]},
+        {"name": "Numerical Ability", "source": "general-gate", "aliases": ["numerical", "aptitude", "quantitative aptitude", "data interpretation", "numerical reasoning", "arithmetic", "ratio and proportion", "time and work"]},
+        {"name": "Analytical Aptitude", "source": "general-gate", "aliases": ["analytical", "logical reasoning", "reasoning", "deduction", "induction", "analogy", "puzzles", "seating arrangement", "venn diagrams"]},
+        {"name": "Spatial Aptitude", "source": "general-gate", "aliases": ["spatial", "spatial reasoning", "shapes", "transformation of shapes", "rotation of figures", "mirror image", "paper folding", "3d figures"]}
+      ]
+    }
+  ]
+}

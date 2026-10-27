@@ -1,0 +1,201 @@
+# Topic tags for GATE CS 2019-2021 questions (scanned papers read through OCR). Same format as gate_cs_2022_2026.txt:
+#   <question number> <topic> [+ <second topic>] [?]          (number = slot 1..65: GA 1-10, then CS 11-65)
+# Bootstrap labels written from the question text; '?' = unsure. A person should spot-check a sample.
+## 2019_CS
+1 verbal-ability
+2 verbal-ability
+3 numerical-ability
+4 numerical-ability
+5 verbal-ability
+6 analytical-aptitude
+7 numerical-ability ?
+8 verbal-ability
+9 numerical-ability
+10 analytical-aptitude
+11 memory-interfacing-and-hierarchy
+12 memory-interfacing-and-hierarchy
+13 parsing
+14 number-representation-and-arithmetic
+15 discrete-mathematics
+16 boolean-algebra-and-minimization ?
+17 regular-expressions-and-finite-automata
+18 number-representation-and-arithmetic
+19 linear-algebra
+20 discrete-mathematics
+21 transactions-and-concurrency-control
+22 discrete-mathematics
+23 calculus
+24 indexing
+25 regular-expressions-and-finite-automata
+26 dns-and-http ?
+27 system-calls
+28 programming-in-c
+29 parsing
+30 sorting
+31 discrete-mathematics
+32 probability-and-statistics
+33 concurrency-and-synchronization
+34 programming-in-c
+35 algorithm-design-techniques ?
+36 recursion
+37 programming-in-c
+38 ipv4
+39 data-link-layer ?
+40 boolean-algebra-and-minimization
+41 regular-and-context-free-languages-pumping-lemma
+42 normal-forms
+43 memory-management-and-virtual-memory
+44 turing-machines-and-undecidability
+45 discrete-mathematics
+46 syntax-directed-translation
+47 asymptotic-worst-case-time-and-space-complexity ?
+48 graph-algorithms
+49 deadlock
+50 data-structures
+51 cpu-and-i-o-scheduling
+52 file-systems
+53 parsing
+54 linear-algebra
+55 memory-interfacing-and-hierarchy
+56 probability-and-statistics ?
+57 probability-and-statistics
+58 discrete-mathematics
+59 basics-of-switching
+60 boolean-algebra-and-minimization
+61 relational-model
+62 programming-in-c
+63 programming-in-c
+64 discrete-mathematics ?
+65 relational-model
+## 2017_CS1
+1 discrete-mathematics
+2 discrete-mathematics
+3 linear-algebra
+4 asymptotic-worst-case-time-and-space-complexity
+5 algorithm-design-techniques
+6 data-structures
+7 number-representation-and-arithmetic
+8 programming-in-c
+9 number-representation-and-arithmetic
+10 context-free-grammars-and-push-down-automata
+11 instruction-set-and-addressing-modes
+12 intermediate-code-generation ?
+13 programming-in-c
+14 tcp
+15 computer-networks ?
+16 normal-forms
+17 parsing
+18 threads
+19 probability-and-statistics
+20 discrete-mathematics
+21 boolean-algebra-and-minimization
+22 regular-expressions-and-finite-automata
+23 relational-model
+24 cpu-and-i-o-scheduling
+25 memory-interfacing-and-hierarchy
+26 graph-algorithms
+27 concurrency-and-synchronization
+28 calculus
+29 discrete-mathematics
+30 linear-algebra
+31 linear-algebra
+32 data-link-layer
+33 design-of-combinational-and-sequential-circuits
+34 context-free-grammars-and-push-down-automata
+35 recursion
+36 programming-in-c
+37 context-free-grammars-and-push-down-automata
+38 regular-and-context-free-languages-pumping-lemma
+39 turing-machines-and-undecidability
+40 memory-management-and-virtual-memory
+41 integrity-constraints
+42 transactions-and-concurrency-control
+43 parsing
+44 discrete-mathematics ?
+45 data-link-layer
+46 relational-model
+47 discrete-mathematics
+48 searching
+49 instruction-set-and-addressing-modes
+50 instruction-pipelining-pipeline-hazards
+51 memory-interfacing-and-hierarchy
+52 intermediate-code-generation ?
+53 programming-in-c
+54 memory-interfacing-and-hierarchy
+55 programming-in-c
+56 verbal-ability
+57 verbal-ability
+58 analytical-aptitude
+59 numerical-ability
+60 numerical-ability
+61 verbal-ability
+62 analytical-aptitude
+63 numerical-ability
+64 analytical-aptitude
+65 spatial-aptitude ?
+## 2017_CS2
+1 number-representation-and-arithmetic
+2 programming-in-c
+3 asymptotic-worst-case-time-and-space-complexity
+4 regular-and-context-free-languages-pumping-lemma
+5 lexical-analysis ?
+6 parsing
+7 threads
+8 file-systems
+9 distance-vector-and-link-state-routing
+10 calculus
+11 discrete-mathematics
+12 number-representation-and-arithmetic
+13 data-structures
+14 programming-in-c
+15 graph-algorithms
+16 context-free-grammars-and-push-down-automata
+17 er-model
+18 computer-networks ?
+19 relational-model
+20 ipv4
+21 discrete-mathematics
+22 linear-algebra
+23 discrete-mathematics
+24 number-representation-and-arithmetic
+25 regular-expressions-and-finite-automata
+26 probability-and-statistics
+27 boolean-algebra-and-minimization
+28 boolean-algebra-and-minimization
+29 memory-interfacing-and-hierarchy
+30 asymptotic-worst-case-time-and-space-complexity
+31 probability-and-statistics
+32 parsing
+33 deadlock
+34 data-link-layer ?
+35 performance-metrics
+36 data-structures
+37 programming-in-c
+38 asymptotic-worst-case-time-and-space-complexity
+39 regular-expressions-and-finite-automata
+40 regular-and-context-free-languages-pumping-lemma
+41 regular-expressions-and-finite-automata ?
+42 design-of-combinational-and-sequential-circuits
+43 programming-in-c
+44 transactions-and-concurrency-control
+45 memory-interfacing-and-hierarchy
+46 relational-model
+47 discrete-mathematics
+48 probability-and-statistics
+49 indexing
+50 algorithm-design-techniques
+51 cpu-and-i-o-scheduling
+52 linear-algebra
+53 memory-interfacing-and-hierarchy
+54 programming-in-c
+55 programming-in-c
+56 verbal-ability
+57 verbal-ability
+58 analytical-aptitude
+59 numerical-ability
+60 numerical-ability
+61 verbal-ability
+62 analytical-aptitude
+63 numerical-ability
+64 numerical-ability
+65 spatial-aptitude ?

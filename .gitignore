@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+node_modules/
+build/
+*.pyc
+.DS_Store
+.env
+*.env.local
+
+# never published: secrets, local settings, and third-party question material
+apps/api/cognito.env
+*.docx
+deploy/crops/
+deploy/sql/ingest.sql
+deploy/sql/ingest_extra.sql
+deploy/sql/keys.sql

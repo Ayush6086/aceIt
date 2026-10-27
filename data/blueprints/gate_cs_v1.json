@@ -1,0 +1,96 @@
+{
+  "version": "gate-cs-v1",
+  "paper": "CS",
+  "duration_min": 180,
+  "total_questions": 65,
+  "total_marks": 100,
+  "sections": {
+    "GA": {
+      "questions": 10,
+      "one_mark": 5,
+      "two_mark": 5,
+      "marks": 15
+    },
+    "CS": {
+      "questions": 55,
+      "one_mark": 25,
+      "two_mark": 30,
+      "marks": 85
+    }
+  },
+  "marking": {
+    "mcq_negative_fraction": "1/3",
+    "msq": "all-or-nothing, no negative",
+    "nat": "range, no negative"
+  },
+  "subject_marks": {
+    "algorithms": {
+      "target": 7.3,
+      "min": 4,
+      "max": 10
+    },
+    "compiler-design": {
+      "target": 5.9,
+      "min": 4,
+      "max": 8
+    },
+    "computer-networks": {
+      "target": 8,
+      "min": 6,
+      "max": 10
+    },
+    "computer-organization-and-architecture": {
+      "target": 8.8,
+      "min": 7,
+      "max": 10
+    },
+    "databases": {
+      "target": 7,
+      "min": 5,
+      "max": 9
+    },
+    "digital-logic": {
+      "target": 7,
+      "min": 5,
+      "max": 9
+    },
+    "engineering-mathematics": {
+      "target": 15,
+      "min": 12,
+      "max": 19
+    },
+    "operating-system": {
+      "target": 8.3,
+      "min": 7,
+      "max": 10
+    },
+    "programming-and-data-structures": {
+      "target": 10.2,
+      "min": 9,
+      "max": 12
+    },
+    "theory-of-computation": {
+      "target": 7.4,
+      "min": 6,
+      "max": 9
+    }
+  },
+  "type_counts_cs": {
+    "MCQ": {
+      "target": 21.5,
+      "min": 18,
+      "max": 25
+    },
+    "MSQ": {
+      "target": 16.8,
+      "min": 11,
+      "max": 24
+    },
+    "NAT": {
+      "target": 16.8,
+      "min": 13,
+      "max": 22
+    }
+  },
+  "derived_from": "6 paper years (2018, 2022-2026), topic tags are bootstrap labels"
+}

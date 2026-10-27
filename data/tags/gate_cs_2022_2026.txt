@@ -1,0 +1,533 @@
+# Topic tags for GATE CS 2022-2026 questions.
+# Format:   <question number> <topic> [+ <second topic>] [?]
+#   topic = the last path segment of a slug in data/taxonomy/gate_cs.json (any level), or a subject slug
+#           (e.g. computer-organization-and-architecture) when no specific topic of that subject fits.
+#   '?'   = lower confidence.   Tagged by Claude reading each question against the syllabus (bootstrap labels).
+## 2024_CS1
+1 verbal-ability
+2 numerical-ability
+3 numerical-ability
+4 numerical-ability
+5 numerical-ability
+6 verbal-ability
+7 numerical-ability
+8 numerical-ability
+9 spatial-aptitude
+10 spatial-aptitude
+11 limits-continuity-and-differentiability
+12 eigenvalues-and-eigenvectors
+13 number-representation-and-arithmetic
+14 probability-and-statistics ?
+15 i-o-interface-interrupt-and-dma
+16 dns-and-http ?
+17 asymptotic-worst-case-time-and-space-complexity
+18 programming-in-c
+19 programming-in-c + recursion
+20 er-model
+21 b-and-b-trees
+22 normal-forms
+23 regular-and-context-free-languages-pumping-lemma
+24 threads
+25 processes
+26 parsing
+27 conditional-probability-and-bayes-theorem
+28 design-of-combinational-and-sequential-circuits
+29 tcp
+30 instruction-pipelining-pipeline-hazards
+31 network-address-translation
+32 sets-relations-functions-partial-orders-and-lattices
+33 programming-in-c ?
+34 graphs-connectivity-matching-colouring
+35 relational-algebra
+36 performance-metrics
+37 syntax-directed-translation
+38 parsing
+39 intermediate-code-generation ?
+40 concurrency-and-synchronization
+41 binary-heaps
+42 asymptotic-worst-case-time-and-space-complexity
+43 binary-heaps
+44 normal-forms
+45 graph-traversals
+46 transactions-and-concurrency-control
+47 algebraic-technique
+48 programming-in-c
+49 matrices-determinants-system-of-linear-equations
+50 regular-expressions-and-finite-automata
+51 graphs-connectivity-matching-colouring
+52 monoids-groups ?
+53 cache-memory-mapping
+54 memory-interfacing-and-hierarchy ?
+55 computer-organization-and-architecture ?
+56 performance
+57 system-calls
+58 cidr-notation
+59 context-free-grammars-and-push-down-automata
+60 graph-traversals
+61 regular-expressions-and-finite-automata
+62 memory-management-and-virtual-memory
+63 conditional-probability-and-bayes-theorem
+64 design-of-combinational-and-sequential-circuits
+65 fragmentation
+## 2024_CS2
+1 verbal-ability
+2 numerical-ability ?
+3 numerical-ability
+4 numerical-ability
+5 numerical-ability
+6 verbal-ability
+7 numerical-ability
+8 numerical-ability
+9 spatial-aptitude
+10 analytical-aptitude
+11 i-o-interface-interrupt-and-dma
+12 propositional-and-first-order-logic
+13 programming-in-c
+14 fixed-and-floating-point
+15 asymptotic-worst-case-time-and-space-complexity + combinatorics-counting-recurrence-relations-generating-functions
+16 integration
+17 graphs-connectivity-matching-colouring
+18 probability-and-statistics
+19 transactions-and-concurrency-control
+20 er-model
+21 compiler-design ?
+22 regular-expressions-and-finite-automata
+23 principles-of-layering ?
+24 memory-management-and-virtual-memory
+25 processes ?
+26 file-organization
+27 transactions-and-concurrency-control
+28 fragmentation
+29 syntax-directed-translation
+30 algebraic-technique
+31 instruction-pipelining-pipeline-hazards
+32 ipv4
+33 programming-in-c
+34 sets-relations-functions-partial-orders-and-lattices
+35 dynamic-programming
+36 programming-in-c
+37 cpu-and-i-o-scheduling
+38 cidr-notation
+39 binary-search-trees
+40 parsing
+41 regular-expressions-and-finite-automata
+42 programming-in-c
+43 intermediate-code-generation
+44 random-variables
+45 relational-algebra
+46 concurrency-and-synchronization
+47 matrices-determinants-system-of-linear-equations
+48 stacks
+49 number-representation-and-arithmetic
+50 boolean-algebra-and-minimization ?
+51 minimum-spanning-trees
+52 context-free-grammars-and-push-down-automata
+53 memory-interfacing-and-hierarchy ?
+54 flow-control-and-congestion-control
+55 medium-access-control
+56 normal-forms
+57 instruction-set-and-addressing-modes
+58 instruction-pipelining-pipeline-hazards
+59 minimum-spanning-trees
+60 graphs-connectivity-matching-colouring
+61 instruction-set-and-addressing-modes
+62 regular-expressions-and-finite-automata
+63 monoids-groups
+64 memory-management-and-virtual-memory
+65 parsing
+## 2025_CS1
+1 verbal-ability
+2 verbal-ability
+3 numerical-ability
+4 analytical-aptitude
+5 analytical-aptitude ?
+6 verbal-ability
+7 numerical-ability
+8 numerical-ability
+9 spatial-aptitude
+10 numerical-ability
+11 i-o-interface-interrupt-and-dma
+12 runtime-environments ?
+13 liveness-analysis
+14 memory-management-and-virtual-memory
+15 transactions-and-concurrency-control
+16 principles-of-layering
+17 sets-relations-functions-partial-orders-and-lattices
+18 minimum-spanning-trees + shortest-paths
+19 context-free-grammars-and-push-down-automata
+20 asymptotic-worst-case-time-and-space-complexity
+21 b-and-b-trees
+22 tcp
+23 matrices-determinants-system-of-linear-equations
+24 boolean-algebra-and-minimization
+25 number-representation-and-arithmetic
+26 binary-search-trees
+27 design-of-arithmetic-and-logic-unit-alu ?
+28 regular-expressions-and-finite-automata
+29 processes ?
+30 combinatorics-counting-recurrence-relations-generating-functions
+31 limits-continuity-and-differentiability
+32 conditional-probability-and-bayes-theorem
+33 sorting
+34 programming-in-c
+35 binary-heaps
+36 cache-memory-mapping
+37 instruction-set-and-addressing-modes
+38 cpu-and-i-o-scheduling
+39 relational-algebra ?
+40 cidr-notation
+41 eigenvalues-and-eigenvectors
+42 boolean-algebra-and-minimization
+43 shortest-paths ?
+44 regular-and-context-free-languages-pumping-lemma
+45 regular-and-context-free-languages-pumping-lemma
+46 parsing
+47 normal-forms
+48 propositional-and-first-order-logic
+49 monoids-groups ?
+50 regular-expressions-and-finite-automata
+51 file-systems
+52 intermediate-code-generation ?
+53 performance
+54 memory-management-and-virtual-memory
+55 sql
+56 uniform-normal-exponential-poisson-and-binomial-distributions
+57 fragmentation
+58 random-variables
+59 design-of-combinational-and-sequential-circuits
+60 design-of-combinational-and-sequential-circuits
+61 programming-in-c + recursion
+62 linked-lists
+63 programming-in-c
+64 minimum-spanning-trees
+65 hashing
+## 2025_CS2
+1 verbal-ability
+2 verbal-ability
+3 numerical-ability
+4 spatial-aptitude
+5 numerical-ability
+6 analytical-aptitude
+7 analytical-aptitude
+8 analytical-aptitude ?
+9 numerical-ability
+10 analytical-aptitude ?
+11 matrices-determinants-system-of-linear-equations ?
+12 integration
+13 trees
+14 matrices-determinants-system-of-linear-equations
+15 propositional-and-first-order-logic
+16 principles-of-layering ?
+17 distance-vector-and-link-state-routing
+18 ipv4
+19 programming-in-c
+20 algorithms ?
+21 intermediate-code-generation
+22 syntax-directed-translation
+23 fragmentation ?
+24 context-free-grammars-and-push-down-automata
+25 turing-machines-and-undecidability
+26 cpu-and-i-o-scheduling
+27 transactions-and-concurrency-control
+28 instruction-set-and-addressing-modes
+29 graph-traversals
+30 regular-and-context-free-languages-pumping-lemma ?
+31 design-of-combinational-and-sequential-circuits ?
+32 number-representation-and-arithmetic ?
+33 programming-in-c
+34 design-of-combinational-and-sequential-circuits
+35 binary-search-trees
+36 data-link-layer
+37 minimum-spanning-trees
+38 data-structures
+39 cache-memory-mapping
+40 parsing
+41 searching ?
+42 sets-relations-functions-partial-orders-and-lattices
+43 karnaugh-map
+44 lu-decomposition
+45 stacks
+46 normal-forms
+47 memory-management-and-virtual-memory
+48 deadlock
+49 fixed-and-floating-point
+50 algebraic-technique
+51 context-free-grammars-and-push-down-automata ?
+52 regular-and-context-free-languages-pumping-lemma
+53 transactions-and-concurrency-control
+54 sql ?
+55 performance
+56 instruction-pipelining-pipeline-hazards
+57 b-and-b-trees
+58 memory-management-and-virtual-memory
+59 graph-traversals
+60 regular-expressions-and-finite-automata ?
+61 computer-organization-and-architecture ?
+62 programming-in-c
+63 programming-in-c
+64 engineering-mathematics ?
+65 random-variables ?
+## 2026_CS1
+1 verbal-ability
+2 spatial-aptitude
+3 analytical-aptitude ?
+4 numerical-ability
+5 analytical-aptitude
+6 verbal-ability ?
+7 spatial-aptitude
+8 numerical-ability
+9 numerical-ability ?
+10 numerical-ability
+11 probability-and-statistics ?
+12 combinatorics-counting-recurrence-relations-generating-functions ?
+13 eigenvalues-and-eigenvectors
+14 instruction-set-and-addressing-modes
+15 instruction-set-and-addressing-modes ?
+16 instruction-pipelining-pipeline-hazards
+17 asymptotic-worst-case-time-and-space-complexity + divide-and-conquer
+18 tcp
+19 dns-and-http
+20 matrices-determinants-system-of-linear-equations
+21 algebraic-technique
+22 number-representation-and-arithmetic
+23 binary-heaps
+24 hashing
+25 context-free-grammars-and-push-down-automata
+26 regular-expressions-and-finite-automata
+27 programming-in-c
+28 parsing
+29 deadlock
+30 normal-forms
+31 normal-forms
+32 limits-continuity-and-differentiability
+33 trees
+34 programming-in-c
+35 deadlock
+36 fixed-and-floating-point
+37 design-of-combinational-and-sequential-circuits
+38 cache-memory-mapping
+39 linked-lists
+40 binary-search-trees
+41 shortest-paths
+42 common-sub-expression-elimination
+43 tuple-calculus
+44 flow-control-and-congestion-control
+45 data-link-layer
+46 maxima-and-minima ?
+47 graphs-connectivity-matching-colouring
+48 karnaugh-map ?
+49 minimum-spanning-trees
+50 graph-traversals
+51 regular-and-context-free-languages-pumping-lemma
+52 context-free-grammars-and-push-down-automata
+53 syntax-directed-translation
+54 memory-management-and-virtual-memory ?
+55 graphs-connectivity-matching-colouring
+56 cidr-notation
+57 graphs-connectivity-matching-colouring
+58 random-variables
+59 memory-interfacing-and-hierarchy ?
+60 instruction-pipelining-pipeline-hazards
+61 recursion
+62 binary-search-trees
+63 system-calls
+64 cpu-and-i-o-scheduling
+65 integrity-constraints ?
+## 2026_CS2
+1 verbal-ability
+2 spatial-aptitude
+3 numerical-ability
+4 numerical-ability
+5 analytical-aptitude
+6 verbal-ability
+7 spatial-aptitude ?
+8 analytical-aptitude
+9 analytical-aptitude
+10 numerical-ability
+11 propositional-and-first-order-logic
+12 trees
+13 turing-machines-and-undecidability
+14 uniform-normal-exponential-poisson-and-binomial-distributions
+15 databases ?
+16 algebraic-technique
+17 runtime-environments
+18 i-o-interface-interrupt-and-dma
+19 programming-in-c
+20 transactions-and-concurrency-control
+21 performance-metrics
+22 computer-networks ?
+23 cpu-and-i-o-scheduling
+24 asymptotic-worst-case-time-and-space-complexity
+25 asymptotic-worst-case-time-and-space-complexity ?
+26 sets-relations-functions-partial-orders-and-lattices
+27 integration
+28 number-representation-and-arithmetic
+29 context-free-grammars-and-push-down-automata
+30 hashing
+31 matrices-determinants-system-of-linear-equations
+32 sorting
+33 ipv4
+34 fixed-and-floating-point
+35 lexical-analysis
+36 graphs-connectivity-matching-colouring ?
+37 shortest-paths
+38 algorithms ?
+39 dynamic-programming
+40 boolean-algebra-and-minimization
+41 parsing
+42 normal-forms
+43 error-detection
+44 instruction-set-and-addressing-modes
+45 liveness-analysis
+46 indexing
+47 regular-expressions-and-finite-automata
+48 context-free-grammars-and-push-down-automata ?
+49 binary-search-trees
+50 stacks
+51 concurrency-and-synchronization
+52 cache-memory-mapping
+53 file-systems
+54 memory-management-and-virtual-memory
+55 memory-management-and-virtual-memory
+56 cache-memory-mapping
+57 instruction-pipelining-pipeline-hazards
+58 flow-control-and-congestion-control
+59 design-of-combinational-and-sequential-circuits
+60 programming-in-c
+61 recursion
+62 matrices-determinants-system-of-linear-equations
+63 conditional-probability-and-bayes-theorem
+64 engineering-mathematics ?
+65 data-link-layer
+## 2023_CS
+1 verbal-ability
+2 verbal-ability
+3 numerical-ability
+4 numerical-ability
+5 spatial-aptitude
+6 analytical-aptitude
+7 numerical-ability
+8 verbal-ability
+9 analytical-aptitude ?
+10 spatial-aptitude
+11 compiler-design
+12 binary-heaps
+13 linked-lists
+14 regular-expressions-and-finite-automata
+15 combinatorics-counting-recurrence-relations-generating-functions
+16 relational-model
+17 data-link-layer
+18 matrices-determinants-system-of-linear-equations
+19 lexical-analysis
+20 hashing
+21 design-of-combinational-and-sequential-circuits
+22 threads
+23 system-calls
+24 regular-and-context-free-languages-pumping-lemma
+25 distance-vector-and-link-state-routing
+26 propositional-and-first-order-logic
+27 cpu-and-i-o-scheduling
+28 maxima-and-minima
+29 asymptotic-worst-case-time-and-space-complexity
+30 eigenvalues-and-eigenvectors
+31 integration
+32 number-representation-and-arithmetic
+33 instruction-pipelining-pipeline-hazards
+34 i-o-interface-interrupt-and-dma
+35 programming-in-c
+36 runtime-environments ?
+37 liveness-analysis
+38 concurrency-and-synchronization
+39 context-free-grammars-and-push-down-automata
+40 context-free-grammars-and-push-down-automata
+41 instruction-set-and-addressing-modes ?
+42 memory-interfacing-and-hierarchy
+43 design-of-combinational-and-sequential-circuits
+44 design-of-combinational-and-sequential-circuits
+45 fixed-and-floating-point
+46 binary-heaps
+47 trees
+48 combinatorics-counting-recurrence-relations-generating-functions ?
+49 sets-relations-functions-partial-orders-and-lattices
+50 tcp ?
+51 monoids-groups
+52 dns-and-http
+53 conditional-probability-and-bayes-theorem ?
+54 asymptotic-worst-case-time-and-space-complexity
+55 graphs-connectivity-matching-colouring
+56 graphs-connectivity-matching-colouring ?
+57 memory-management-and-virtual-memory
+58 memory-management-and-virtual-memory
+59 stacks
+60 syntax-directed-translation
+61 sql
+62 indexing
+63 regular-expressions-and-finite-automata
+64 cache-memory-mapping
+65 cidr-notation
+## 2022_CS
+1 verbal-ability
+2 numerical-ability
+3 numerical-ability
+4 analytical-aptitude
+5 analytical-aptitude ?
+6 verbal-ability
+7 numerical-ability
+8 numerical-ability ?
+9 analytical-aptitude
+10 spatial-aptitude ?
+11 asymptotic-worst-case-time-and-space-complexity
+12 regular-expressions-and-finite-automata
+13 compiler-design
+14 normal-forms
+15 linked-lists
+16 hashing
+17 i-o-interface-interrupt-and-dma
+18 number-representation-and-arithmetic
+19 concurrency-and-synchronization
+20 matrices-determinants-system-of-linear-equations
+21 programming-in-c
+22 ipv4 ?
+23 turing-machines-and-undecidability
+24 cache-memory-mapping
+25 relational-algebra
+26 deadlock
+27 monoids-groups
+28 binary-search-trees ?
+29 parsing
+30 graphs-connectivity-matching-colouring
+31 normal-forms
+32 combinatorics-counting-recurrence-relations-generating-functions
+33 performance
+34 limits-continuity-and-differentiability
+35 dns-and-http
+36 combinatorics-counting-recurrence-relations-generating-functions
+37 graphs-connectivity-matching-colouring
+38 memory-management-and-virtual-memory
+39 transactions-and-concurrency-control
+40 design-of-combinational-and-sequential-circuits ?
+41 fixed-and-floating-point
+42 cpu-and-i-o-scheduling
+43 programming-in-c
+44 programming-in-c
+45 lu-decomposition
+46 turing-machines-and-undecidability
+47 regular-and-context-free-languages-pumping-lemma
+48 regular-and-context-free-languages-pumping-lemma
+49 minimum-spanning-trees
+50 graphs-connectivity-matching-colouring
+51 combinatorics-counting-recurrence-relations-generating-functions ?
+52 graphs-connectivity-matching-colouring ?
+53 eigenvalues-and-eigenvectors
+54 cache-memory-mapping
+55 cidr-notation
+56 sql
+57 distance-vector-and-link-state-routing
+58 graph-traversals ?
+59 performance-metrics
+60 tcp
+61 instruction-pipelining-pipeline-hazards
+62 queues
+63 file-systems
+64 memory-management-and-virtual-memory
+65 syntax-directed-translation

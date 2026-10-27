@@ -1,0 +1,50 @@
+# aceIt sign-in: one Cognito user pool, one public app client (no secret), one hosted-sign-in domain. Region: ap-south-1.
+#   aws cloudformation deploy --stack-name aceit-auth --template-file infra/cognito.yaml --region ap-south-1 \
+#     --parameter-overrides DomainPrefix=aceit-<something-unique> AppUrl=https://<your-app-domain>/
+# Passes `aws cloudformation validate-template`; not yet deployed.
+AWSTemplateFormatVersion: "2010-09-09"
+Description: aceIt user pool and app client
+Parameters:
+  DomainPrefix: { Type: String, Description: Globally unique prefix for the hosted sign-in page }
+  AppUrl: { Type: String, Default: "http://localhost:8000/", Description: "Where the app lives, with a trailing slash. It must match the app's redirect exactly." }
+  ProdUrl: { Type: String, Default: "", Description: "Optional second address (https, trailing slash), e.g. the CloudFront address of the deployed prototype" }
+Conditions:
+  HasProd: !Not [!Equals [!Ref ProdUrl, ""]]
+Resources:
+  Pool:
+    Type: AWS::Cognito::UserPool
+    DeletionPolicy: Retain                      # losing the pool would lose every account
+    Properties:
+      UserPoolName: aceit
+      UsernameAttributes: [email]
+      AutoVerifiedAttributes: [email]
+      AccountRecoverySetting: { RecoveryMechanisms: [{ Name: verified_email, Priority: 1 }] }
+      Policies: { PasswordPolicy: { MinimumLength: 10, RequireLowercase: true, RequireUppercase: true, RequireNumbers: true, RequireSymbols: false } }
+      AdminCreateUserConfig: { AllowAdminCreateUserOnly: false }      # students sign themselves up
+  Client:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      UserPoolId: !Ref Pool
+      ClientName: aceit-web
+      GenerateSecret: false                     # a browser app cannot keep a secret; PKCE protects the code exchange
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthFlows: [code]                 # no implicit flow: tokens never travel in the URL
+      AllowedOAuthScopes: [openid, email]
+      SupportedIdentityProviders: [COGNITO]
+      CallbackURLs: !If [HasProd, [!Ref AppUrl, !Ref ProdUrl], [!Ref AppUrl]]
+      LogoutURLs: !If [HasProd, [!Ref AppUrl, !Ref ProdUrl], [!Ref AppUrl]]
+      ExplicitAuthFlows: [ALLOW_REFRESH_TOKEN_AUTH]
+      PreventUserExistenceErrors: ENABLED
+      IdTokenValidity: 60
+      AccessTokenValidity: 60
+      RefreshTokenValidity: 30
+      TokenValidityUnits: { IdToken: minutes, AccessToken: minutes, RefreshToken: days }
+  Domain:
+    Type: AWS::Cognito::UserPoolDomain
+    Properties: { UserPoolId: !Ref Pool, Domain: !Ref DomainPrefix }
+Outputs:
+  # These four become the API's environment as ACEIT_COGNITO_POOL_ID, _CLIENT_ID, _DOMAIN and _REGION (see docs/system-design.md, section 22)
+  PoolId: { Value: !Ref Pool }
+  ClientId: { Value: !Ref Client }
+  Domain: { Value: !Sub "${DomainPrefix}.auth.${AWS::Region}.amazoncognito.com" }
+  Region: { Value: !Ref "AWS::Region" }

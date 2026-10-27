@@ -1,0 +1,27 @@
+[project]
+name = "aceit-api"
+version = "0.1.0"
+description = "aceIt API: exam engine, tests, attempts and results"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "pydantic>=2.8",
+    "psycopg[binary,pool]>=3.2",
+    "pyjwt[crypto]>=2.9",
+    "httpx>=0.27",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aceit"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,113 @@
+# aceIt prototype on AWS: ONE small EC2 server runs the app and its PostgreSQL in containers; CloudFront gives it a free HTTPS address
+# (Cognito requires https). No load balancer, no NAT gateway, no managed database: that keeps it to roughly 15-20 USD a month, and it is
+# easy to delete. The database lives on the server's disk with NO backups: this is a prototype, not production.
+#   aws cloudformation deploy --stack-name aceit-proto --template-file infra/prototype.yaml --region ap-south-1 --capabilities CAPABILITY_IAM \
+#     --parameter-overrides CloudFrontPrefixListId=<pl-...>
+# then upload the app:  deploy/package.sh   (the server waits for it, builds the image and loads the question bank)
+# Administer with Session Manager (no SSH port is open):  aws ssm start-session --target <InstanceId>
+AWSTemplateFormatVersion: "2010-09-09"
+Description: aceIt prototype (EC2 + CloudFront)
+Parameters:
+  CloudFrontPrefixListId: { Type: String, Description: "ID of the managed prefix list com.amazonaws.global.cloudfront.origin-facing in this region" }
+  InstanceType: { Type: String, Default: t4g.small, Description: "ARM server. t4g.small has 2 GB of memory (enough for the app and PostgreSQL)" }
+  CognitoPoolId: { Type: String, Default: ap-south-1_CZ5wARQb1 }
+  CognitoClientId: { Type: String, Default: drq4j56fiuornvf070jk2oh8t }
+  CognitoDomain: { Type: String, Default: aceit-prep.auth.ap-south-1.amazoncognito.com }
+  PublishDevShortcut: { Type: String, Default: "true", AllowedValues: ["true", "false"], Description: "true = make 2018+ questions live without the publish gate (prototype only)" }
+  AmiId: { Type: "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>", Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64 }
+Resources:
+  Vpc:
+    Type: AWS::EC2::VPC
+    Properties: { CidrBlock: 10.20.0.0/16, EnableDnsSupport: true, EnableDnsHostnames: true, Tags: [{ Key: Name, Value: aceit-proto }] }
+  Igw: { Type: AWS::EC2::InternetGateway }
+  IgwAttach: { Type: AWS::EC2::VPCGatewayAttachment, Properties: { VpcId: !Ref Vpc, InternetGatewayId: !Ref Igw } }
+  Subnet:
+    Type: AWS::EC2::Subnet
+    Properties: { VpcId: !Ref Vpc, CidrBlock: 10.20.1.0/24, AvailabilityZone: !Select [0, !GetAZs ""], MapPublicIpOnLaunch: true }
+  Routes: { Type: AWS::EC2::RouteTable, Properties: { VpcId: !Ref Vpc } }
+  DefaultRoute: { Type: AWS::EC2::Route, DependsOn: IgwAttach, Properties: { RouteTableId: !Ref Routes, DestinationCidrBlock: 0.0.0.0/0, GatewayId: !Ref Igw } }
+  RouteAssoc: { Type: AWS::EC2::SubnetRouteTableAssociation, Properties: { SubnetId: !Ref Subnet, RouteTableId: !Ref Routes } }
+  Sg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: aceit prototype - port 80 from CloudFront only, nothing else inbound
+      VpcId: !Ref Vpc
+      SecurityGroupIngress: [{ IpProtocol: tcp, FromPort: 80, ToPort: 80, SourcePrefixListId: !Ref CloudFrontPrefixListId }]
+  Bucket:                                          # holds the app package the server downloads at first boot
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption: { ServerSideEncryptionConfiguration: [{ ServerSideEncryptionByDefault: { SSEAlgorithm: AES256 } }] }
+      PublicAccessBlockConfiguration: { BlockPublicAcls: true, BlockPublicPolicy: true, IgnorePublicAcls: true, RestrictPublicBuckets: true }
+  Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument: { Version: "2012-10-17", Statement: [{ Effect: Allow, Principal: { Service: ec2.amazonaws.com }, Action: "sts:AssumeRole" }] }
+      ManagedPolicyArns: ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]
+      Policies:
+        - PolicyName: read-package
+          PolicyDocument: { Version: "2012-10-17", Statement: [{ Effect: Allow, Action: "s3:GetObject", Resource: !Sub "${Bucket.Arn}/*" }] }
+        - PolicyName: read-aceit-secrets                  # the AI key lives in Parameter Store (SecureString) under /aceit/, read only by this server
+          PolicyDocument: { Version: "2012-10-17", Statement: [{ Effect: Allow, Action: "ssm:GetParameter", Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/aceit/*" }] }
+  Profile: { Type: AWS::IAM::InstanceProfile, Properties: { Roles: [!Ref Role] } }
+  Server:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref AmiId
+      InstanceType: !Ref InstanceType
+      SubnetId: !Ref Subnet
+      SecurityGroupIds: [!Ref Sg]
+      IamInstanceProfile: !Ref Profile
+      MetadataOptions: { HttpTokens: required, HttpEndpoint: enabled }          # IMDSv2 only
+      BlockDeviceMappings: [{ DeviceName: /dev/xvda, Ebs: { VolumeSize: 20, VolumeType: gp3, Encrypted: true, DeleteOnTermination: true } }]
+      Tags: [{ Key: Name, Value: aceit-proto }]
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          exec > >(tee /var/log/aceit-setup.log) 2>&1
+          set -eux
+          dnf install -y docker
+          systemctl enable --now docker
+          mkdir -p /opt/aceit /var/lib/aceit-pg
+          # wait for the app package to be uploaded (deploy/package.sh), then unpack it
+          until aws s3 cp s3://${Bucket}/aceit.tgz /opt/aceit/aceit.tgz --region ${AWS::Region}; do sleep 20; done
+          tar xzf /opt/aceit/aceit.tgz -C /opt/aceit
+          PGPASS=$(head -c 32 /dev/urandom | base64 | tr -dc 'A-Za-z0-9' | head -c 24)
+          umask 077; echo "$PGPASS" > /opt/aceit/db-password
+          docker network create aceit
+          docker run -d --name db --network aceit --restart always -e POSTGRES_PASSWORD="$PGPASS" -e POSTGRES_DB=aceit \
+            -v /var/lib/aceit-pg:/var/lib/postgresql/data postgres:16-alpine
+          docker build -t aceit /opt/aceit
+          until docker exec db pg_isready -U postgres -d aceit; do sleep 3; done
+          DBURL="postgresql://postgres:$PGPASS@db:5432/aceit"
+          docker run --rm --network aceit -e ACEIT_DATABASE_URL="$DBURL" aceit python -m aceit.admin load
+          if [ "${PublishDevShortcut}" = "true" ]; then
+            docker run --rm --network aceit -e ACEIT_DATABASE_URL="$DBURL" aceit python -m aceit.admin publish-dev
+          fi
+          docker run -d --name app --network aceit --restart always -p 80:8000 -e ACEIT_DATABASE_URL="$DBURL" \
+            -e ACEIT_AUTH_MODE=jwt -e ACEIT_COGNITO_REGION=${AWS::Region} -e ACEIT_COGNITO_POOL_ID=${CognitoPoolId} \
+            -e ACEIT_COGNITO_CLIENT_ID=${CognitoClientId} -e ACEIT_COGNITO_DOMAIN=${CognitoDomain} -e ACEIT_RUN_JOBS=1 aceit
+          echo SETUP-DONE
+  Eip: { Type: AWS::EC2::EIP, Properties: { Domain: vpc, InstanceId: !Ref Server } }       # a fixed address, so CloudFront keeps finding the server
+  Cdn:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: aceit prototype
+        HttpVersion: http2and3
+        PriceClass: PriceClass_200
+        Origins:
+          - Id: server
+            DomainName: !Join ["", ["ec2-", !Join ["-", !Split [".", !Ref Eip]], ".", !Ref "AWS::Region", ".compute.amazonaws.com"]]
+            CustomOriginConfig: { OriginProtocolPolicy: http-only, HTTPPort: 80 }
+        DefaultCacheBehavior:
+          TargetOriginId: server
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE]
+          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad          # CachingDisabled: every request reaches the app
+          OriginRequestPolicyId: b689b0a8-53d0-40ab-baf2-68738e2966ac  # AllViewerExceptHostHeader
+          Compress: true
+Outputs:
+  Url: { Value: !Sub "https://${Cdn.DomainName}/" }
+  InstanceId: { Value: !Ref Server }
+  PackageBucket: { Value: !Ref Bucket }

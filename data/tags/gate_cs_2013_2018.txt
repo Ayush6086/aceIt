@@ -1,0 +1,664 @@
+# Topic tags for GATE CS 2013-2018 questions. Same format as gate_cs_2022_2026.txt:
+#   <question number> <topic> [+ <second topic>] [?]          (number = slot 1..65: GA 1-10, then CS 11-65)
+# 2013 booklets B, C, D hold the same questions as booklet A in a different order: their tags are CARRIED OVER from
+# booklet A by tools/map_booklets.py (text similarity, verified), not read one by one.
+## 2018_CS
+1 verbal-ability
+2 verbal-ability
+3 numerical-ability
+4 numerical-ability
+5 numerical-ability
+6 numerical-ability
+7 numerical-ability
+8 numerical-ability
+9 numerical-ability ?
+10 numerical-ability
+11 combinatorics-counting-recurrence-relations-generating-functions
+12 programming-in-c
+13 queues
+14 boolean-algebra-and-minimization
+15 computer-organization-and-architecture ?
+16 regular-expressions-and-finite-automata
+17 turing-machines-and-undecidability
+18 compiler-design ?
+19 i-o-interface-interrupt-and-dma
+20 memory-management-and-virtual-memory
+21 er-model
+22 sql
+23 computer-networks ?
+24 flow-control-and-congestion-control
+25 probability-and-statistics
+26 integration
+27 eigenvalues-and-eigenvectors
+28 graphs-connectivity-matching-colouring
+29 monoids-groups
+30 trees
+31 recursion
+32 design-of-combinational-and-sequential-circuits
+33 memory-interfacing-and-hierarchy
+34 deadlock
+35 tcp ?
+36 eigenvalues-and-eigenvectors
+37 sets-relations-functions-partial-orders-and-lattices
+38 propositional-and-first-order-logic
+39 programming-in-c
+40 graph-traversals
+41 dynamic-programming
+42 programming-in-c ?
+43 fixed-and-floating-point
+44 cache-memory-mapping
+45 regular-and-context-free-languages-pumping-lemma
+46 turing-machines-and-undecidability
+47 lexical-analysis
+48 parsing ?
+49 deadlock
+50 concurrency-and-synchronization
+51 relational-algebra
+52 normal-forms
+53 graphs-connectivity-matching-colouring
+54 conditional-probability-and-bayes-theorem
+55 recursion
+56 binary-heaps
+57 minimum-spanning-trees
+58 greedy
+59 boolean-algebra-and-minimization
+60 instruction-pipelining-pipeline-hazards
+61 instruction-set-and-addressing-modes
+62 regular-and-context-free-languages-pumping-lemma ?
+63 cpu-and-i-o-scheduling ?
+64 fragmentation
+65 medium-access-control
+## 2016_CS1
+1 verbal-ability
+2 verbal-ability
+3 verbal-ability
+4 analytical-aptitude ?
+5 spatial-aptitude
+6 numerical-ability
+7 analytical-aptitude
+8 analytical-aptitude
+9 numerical-ability
+10 numerical-ability
+11 propositional-and-first-order-logic
+12 combinatorics-counting-recurrence-relations-generating-functions
+13 limits-continuity-and-differentiability
+14 random-variables
+15 eigenvalues-and-eigenvectors
+16 boolean-algebra-and-minimization
+17 number-representation-and-arithmetic
+18 design-of-combinational-and-sequential-circuits
+19 memory-interfacing-and-hierarchy
+20 queues
+21 graph-traversals ?
+22 programming-in-c
+23 sorting
+24 minimum-spanning-trees
+25 programming-in-c
+26 context-free-grammars-and-push-down-automata
+27 turing-machines-and-undecidability
+28 regular-expressions-and-finite-automata
+29 intermediate-code-generation ?
+30 cpu-and-i-o-scheduling
+31 integrity-constraints
+32 transactions-and-concurrency-control
+33 normal-forms ?
+34 computer-networks ?
+35 dns-and-http ?
+36 combinatorics-counting-recurrence-relations-generating-functions
+37 combinatorics-counting-recurrence-relations-generating-functions
+38 sets-relations-functions-partial-orders-and-lattices
+39 probability-and-statistics
+40 design-of-combinational-and-sequential-circuits
+41 i-o-interface-interrupt-and-dma
+42 instruction-pipelining-pipeline-hazards
+43 design-of-arithmetic-and-logic-unit-alu
+44 programming-in-c ?
+45 recursion
+46 runtime-environments ?
+47 binary-heaps
+48 minimum-spanning-trees
+49 minimum-spanning-trees
+50 minimum-spanning-trees
+51 queues
+52 context-free-grammars-and-push-down-automata
+53 context-free-grammars-and-push-down-automata
+54 turing-machines-and-undecidability
+55 programming-in-c ?
+56 syntax-directed-translation
+57 memory-management-and-virtual-memory
+58 cpu-and-i-o-scheduling
+59 memory-management-and-virtual-memory
+60 concurrency-and-synchronization
+61 transactions-and-concurrency-control
+62 computer-networks ?
+63 fragmentation
+64 flow-control-and-congestion-control ?
+65 data-link-layer
+## 2016_CS2
+1 verbal-ability
+2 verbal-ability
+3 verbal-ability
+4 analytical-aptitude
+5 numerical-ability
+6 numerical-ability
+7 verbal-ability
+8 analytical-aptitude
+9 numerical-ability ?
+10 numerical-ability ?
+11 propositional-and-first-order-logic
+12 calculus ?
+13 graphs-connectivity-matching-colouring
+14 matrices-determinants-system-of-linear-equations
+15 conditional-probability-and-bayes-theorem
+16 eigenvalues-and-eigenvectors
+17 design-of-arithmetic-and-logic-unit-alu
+18 boolean-algebra-and-minimization
+19 number-representation-and-arithmetic
+20 instruction-set-and-addressing-modes
+21 graph-traversals
+22 programming-in-c
+23 sorting
+24 dynamic-programming
+25 linked-lists
+26 regular-expressions-and-finite-automata
+27 regular-and-context-free-languages-pumping-lemma
+28 regular-and-context-free-languages-pumping-lemma ?
+29 compiler-design
+30 memory-management-and-virtual-memory
+31 b-and-b-trees
+32 transactions-and-concurrency-control
+33 computer-networks ?
+34 ethernet
+35 dns-and-http ?
+36 sets-relations-functions-partial-orders-and-lattices
+37 propositional-and-first-order-logic
+38 graphs-connectivity-matching-colouring ?
+39 discrete-mathematics ?
+40 computer-organization-and-architecture ?
+41 instruction-set-and-addressing-modes
+42 cache-memory-mapping
+43 instruction-pipelining-pipeline-hazards
+44 binary-heaps
+45 programming-in-c ?
+46 trees
+47 recursion
+48 dynamic-programming
+49 asymptotic-worst-case-time-and-space-complexity ?
+50 binary-search-trees
+51 graphs ?
+52 regular-expressions-and-finite-automata
+53 regular-and-context-free-languages-pumping-lemma
+54 turing-machines-and-undecidability
+55 parsing
+56 context-free-grammars-and-push-down-automata
+57 cpu-and-i-o-scheduling
+58 concurrency-and-synchronization
+59 concurrency-and-synchronization
+60 file-systems ?
+61 transactions-and-concurrency-control
+62 sql
+63 medium-access-control
+64 medium-access-control
+65 data-link-layer
+## 2014_CS1
+1 verbal-ability
+2 verbal-ability
+3 verbal-ability
+4 numerical-ability
+5 numerical-ability
+6 verbal-ability
+7 verbal-ability
+8 numerical-ability
+9 numerical-ability
+10 spatial-aptitude
+11 propositional-and-first-order-logic
+12 uniform-normal-exponential-poisson-and-binomial-distributions ?
+13 graph-traversals ?
+14 matrices-determinants-system-of-linear-equations
+15 eigenvalues-and-eigenvectors
+16 calculus ?
+17 boolean-algebra-and-minimization
+18 number-representation-and-arithmetic
+19 instruction-set-and-addressing-modes
+20 programming-in-c
+21 graph-traversals
+22 trees ?
+23 graph-traversals ?
+24 sorting
+25 regular-and-context-free-languages-pumping-lemma
+26 regular-expressions-and-finite-automata
+27 data-flow-analyses ?
+28 software-engineering
+29 cpu-and-i-o-scheduling
+30 threads
+31 normal-forms
+32 sql ?
+33 distance-vector-and-link-state-routing
+34 computer-networks ?
+35 dns-and-http
+36 medium-access-control
+37 flow-control-and-congestion-control
+38 data-link-layer
+39 transactions-and-concurrency-control
+40 normal-forms
+41 deadlock
+42 cpu-and-i-o-scheduling
+43 memory-management-and-virtual-memory
+44 parsing
+45 turing-machines-and-undecidability
+46 regular-expressions-and-finite-automata
+47 discrete-mathematics ?
+48 turing-machines-and-undecidability ?
+49 divide-and-conquer ?
+50 hashing
+51 programming-in-c ?
+52 combinatorics-counting-recurrence-relations-generating-functions ?
+53 instruction-pipelining-pipeline-hazards
+54 cache-memory-mapping
+55 design-of-combinational-and-sequential-circuits
+56 calculus ?
+57 limits-continuity-and-differentiability
+58 probability-and-statistics
+59 combinatorics-counting-recurrence-relations-generating-functions
+60 sets-relations-functions-partial-orders-and-lattices
+61 graphs-connectivity-matching-colouring
+62 graphs-connectivity-matching-colouring
+63 propositional-and-first-order-logic
+64 sql
+65 computer-organization-and-architecture ?
+## 2014_CS2
+1 verbal-ability
+2 verbal-ability
+3 verbal-ability
+4 numerical-ability
+5 numerical-ability
+6 verbal-ability
+7 verbal-ability
+8 numerical-ability
+9 numerical-ability
+10 numerical-ability
+11 probability-and-statistics
+12 probability-and-statistics
+13 graphs-connectivity-matching-colouring
+14 matrices-determinants-system-of-linear-equations
+15 calculus ?
+16 boolean-algebra-and-minimization
+17 design-of-combinational-and-sequential-circuits
+18 number-representation-and-arithmetic
+19 cache-memory-mapping
+20 programming-in-c
+21 programming-in-c ?
+22 binary-heaps
+23 asymptotic-worst-case-time-and-space-complexity
+24 graph-traversals
+25 regular-and-context-free-languages-pumping-lemma
+26 turing-machines-and-undecidability
+27 parsing ?
+28 compiler-design
+29 software-engineering
+30 file-systems
+31 integrity-constraints
+32 sql
+33 distance-vector-and-link-state-routing
+34 socket-api
+35 fragmentation ?
+36 packet
+37 principles-of-layering
+38 dns-and-http
+39 transactions-and-concurrency-control
+40 relational-algebra ?
+41 concurrency-and-synchronization
+42 cpu-and-i-o-scheduling
+43 memory-management-and-virtual-memory
+44 intermediate-code-generation
+45 turing-machines-and-undecidability
+46 regular-and-context-free-languages-pumping-lemma
+47 dynamic-programming
+48 greedy
+49 algorithms ?
+50 recursion ?
+51 stacks
+52 recursion
+53 cache-memory-mapping
+54 cache-memory-mapping
+55 fixed-and-floating-point
+56 calculus ?
+57 eigenvalues-and-eigenvectors
+58 probability-and-statistics
+59 discrete-mathematics ?
+60 sets-relations-functions-partial-orders-and-lattices
+61 graphs-connectivity-matching-colouring
+62 minimum-spanning-trees
+63 propositional-and-first-order-logic
+64 sql
+65 memory-interfacing-and-hierarchy ?
+## 2014_CS3
+1 verbal-ability
+2 verbal-ability
+3 verbal-ability
+4 numerical-ability
+5 numerical-ability
+6 numerical-ability
+7 verbal-ability
+8 numerical-ability
+9 numerical-ability
+10 numerical-ability
+11 propositional-and-first-order-logic
+12 sets-relations-functions-partial-orders-and-lattices
+13 monoids-groups
+14 eigenvalues-and-eigenvectors
+15 linear-algebra ?
+16 calculus ?
+17 karnaugh-map
+18 design-of-combinational-and-sequential-circuits ?
+19 instruction-pipelining-pipeline-hazards
+20 programming-in-c ?
+21 algorithms ?
+22 trees
+23 graph-traversals
+24 sorting
+25 regular-expressions-and-finite-automata
+26 turing-machines-and-undecidability
+27 intermediate-code-generation
+28 runtime-environments
+29 software-engineering
+30 memory-management-and-virtual-memory
+31 relational-algebra
+32 normal-forms
+33 principles-of-layering
+34 data-link-layer
+35 ipv4
+36 cidr-notation
+37 ipv4 ?
+38 fragmentation
+39 transactions-and-concurrency-control
+40 sql
+41 deadlock
+42 cpu-and-i-o-scheduling
+43 memory-management-and-virtual-memory
+44 local-optimisation ?
+45 turing-machines-and-undecidability
+46 context-free-grammars-and-push-down-automata
+47 shortest-paths ?
+48 algorithms ?
+49 binary-search-trees
+50 hashing
+51 trees
+52 searching
+53 instruction-pipelining-pipeline-hazards
+54 performance
+55 design-of-combinational-and-sequential-circuits
+56 integration ?
+57 integration
+58 probability-and-statistics
+59 sets-relations-functions-partial-orders-and-lattices
+60 monoids-groups
+61 graphs-connectivity-matching-colouring
+62 graphs-connectivity-matching-colouring
+63 propositional-and-first-order-logic
+64 sql
+65 boolean-algebra-and-minimization
+## 2013_CS-A
+1 monoids-groups ?
+2 uniform-normal-exponential-poisson-and-binomial-distributions
+3 matrices-determinants-system-of-linear-equations
+4 number-representation-and-arithmetic
+5 design-of-combinational-and-sequential-circuits
+6 sorting
+7 binary-search-trees
+8 regular-expressions-and-finite-automata
+9 parsing
+10 cpu-and-i-o-scheduling
+11 software-engineering ?
+12 tcp
+13 computer-networks ?
+14 principles-of-layering
+15 indexing
+16 deadlock ?
+17 turing-machines-and-undecidability
+18 algorithms ?
+19 shortest-paths
+20 cache-memory-mapping
+21 boolean-algebra-and-minimization
+22 limits-continuity-and-differentiability
+23 integration
+24 probability-and-statistics
+25 graphs-connectivity-matching-colouring
+26 graphs-connectivity-matching-colouring
+27 propositional-and-first-order-logic
+28 design-of-control-unit ?
+29 memory-interfacing-and-hierarchy ?
+30 sorting
+31 asymptotic-worst-case-time-and-space-complexity
+32 regular-and-context-free-languages-pumping-lemma
+33 regular-expressions-and-finite-automata
+34 concurrency-and-synchronization
+35 sql ?
+36 medium-access-control
+37 fragmentation
+38 software-engineering
+39 concurrency-and-synchronization
+40 parsing
+41 turing-machines-and-undecidability
+42 programming-in-c
+43 binary-search-trees
+44 asymptotic-worst-case-time-and-space-complexity ?
+45 instruction-pipelining-pipeline-hazards
+46 memory-interfacing-and-hierarchy
+47 propositional-and-first-order-logic
+48 local-optimisation ?
+49 local-optimisation ?
+50 programming-in-c ?
+51 asymptotic-worst-case-time-and-space-complexity ?
+52 memory-management-and-virtual-memory
+53 memory-management-and-virtual-memory
+54 normal-forms
+55 normal-forms
+56 verbal-ability
+57 verbal-ability
+58 numerical-ability
+59 verbal-ability
+60 verbal-ability
+61 numerical-ability
+62 numerical-ability
+63 verbal-ability
+64 numerical-ability
+65 numerical-ability
+## 2013_CS-B
+1 probability-and-statistics
+2 graphs-connectivity-matching-colouring
+3 integration
+4 limits-continuity-and-differentiability
+5 boolean-algebra-and-minimization
+6 cache-memory-mapping
+7 shortest-paths
+8 algorithms ?
+9 turing-machines-and-undecidability
+10 deadlock ?
+11 indexing
+12 principles-of-layering
+13 tcp
+14 computer-networks ?
+15 software-engineering ?
+16 cpu-and-i-o-scheduling
+17 parsing
+18 regular-expressions-and-finite-automata
+19 binary-search-trees
+20 sorting
+21 design-of-combinational-and-sequential-circuits
+22 number-representation-and-arithmetic
+23 matrices-determinants-system-of-linear-equations
+24 uniform-normal-exponential-poisson-and-binomial-distributions
+25 monoids-groups ?
+26 propositional-and-first-order-logic
+27 memory-interfacing-and-hierarchy
+28 instruction-pipelining-pipeline-hazards
+29 asymptotic-worst-case-time-and-space-complexity ?
+30 binary-search-trees
+31 programming-in-c
+32 turing-machines-and-undecidability
+33 parsing ?
+34 concurrency-and-synchronization
+35 software-engineering
+36 fragmentation
+37 medium-access-control
+38 sql ?
+39 concurrency-and-synchronization
+40 regular-expressions-and-finite-automata
+41 regular-and-context-free-languages-pumping-lemma
+42 asymptotic-worst-case-time-and-space-complexity
+43 sorting
+44 memory-interfacing-and-hierarchy ?
+45 design-of-control-unit ?
+46 graphs-connectivity-matching-colouring
+47 propositional-and-first-order-logic
+48 programming-in-c ?
+49 asymptotic-worst-case-time-and-space-complexity ?
+50 local-optimisation ?
+51 local-optimisation ?
+52 normal-forms
+53 normal-forms
+54 memory-management-and-virtual-memory
+55 memory-management-and-virtual-memory
+56 verbal-ability
+57 verbal-ability
+58 verbal-ability
+59 verbal-ability
+60 numerical-ability
+61 numerical-ability
+62 numerical-ability
+63 numerical-ability
+64 numerical-ability
+65 verbal-ability
+## 2013_CS-C
+1 computer-networks ?
+2 software-engineering ?
+3 cpu-and-i-o-scheduling
+4 parsing
+5 regular-expressions-and-finite-automata
+6 binary-search-trees
+7 sorting
+8 design-of-combinational-and-sequential-circuits
+9 number-representation-and-arithmetic
+10 matrices-determinants-system-of-linear-equations
+11 uniform-normal-exponential-poisson-and-binomial-distributions
+12 monoids-groups ?
+13 graphs-connectivity-matching-colouring
+14 probability-and-statistics
+15 integration
+16 limits-continuity-and-differentiability
+17 boolean-algebra-and-minimization
+18 cache-memory-mapping
+19 shortest-paths
+20 algorithms ?
+21 turing-machines-and-undecidability
+22 deadlock ?
+23 indexing
+24 tcp
+25 principles-of-layering
+26 medium-access-control
+27 sql ?
+28 concurrency-and-synchronization
+29 regular-expressions-and-finite-automata
+30 regular-and-context-free-languages-pumping-lemma
+31 asymptotic-worst-case-time-and-space-complexity
+32 sorting
+33 memory-interfacing-and-hierarchy ?
+34 design-of-control-unit ?
+35 graphs-connectivity-matching-colouring
+36 propositional-and-first-order-logic
+37 propositional-and-first-order-logic
+38 memory-interfacing-and-hierarchy
+39 instruction-pipelining-pipeline-hazards
+40 asymptotic-worst-case-time-and-space-complexity ?
+41 binary-search-trees
+42 programming-in-c
+43 turing-machines-and-undecidability
+44 parsing ?
+45 concurrency-and-synchronization
+46 fragmentation
+47 software-engineering
+48 local-optimisation ?
+49 local-optimisation ?
+50 asymptotic-worst-case-time-and-space-complexity ?
+51 programming-in-c ?
+52 memory-management-and-virtual-memory
+53 memory-management-and-virtual-memory
+54 normal-forms
+55 normal-forms
+56 verbal-ability
+57 verbal-ability
+58 verbal-ability
+59 numerical-ability
+60 verbal-ability
+61 numerical-ability
+62 numerical-ability
+63 numerical-ability
+64 verbal-ability
+65 numerical-ability ?
+## 2013_CS-D
+1 tcp
+2 principles-of-layering
+3 indexing
+4 deadlock ?
+5 turing-machines-and-undecidability
+6 algorithms ?
+7 shortest-paths
+8 cache-memory-mapping
+9 boolean-algebra-and-minimization
+10 limits-continuity-and-differentiability
+11 integration
+12 graphs-connectivity-matching-colouring
+13 probability-and-statistics
+14 monoids-groups ?
+15 uniform-normal-exponential-poisson-and-binomial-distributions
+16 matrices-determinants-system-of-linear-equations
+17 number-representation-and-arithmetic
+18 design-of-combinational-and-sequential-circuits
+19 sorting
+20 binary-search-trees
+21 regular-expressions-and-finite-automata
+22 parsing
+23 cpu-and-i-o-scheduling
+24 software-engineering ?
+25 computer-networks ?
+26 fragmentation
+27 software-engineering
+28 concurrency-and-synchronization
+29 parsing
+30 turing-machines-and-undecidability
+31 programming-in-c
+32 binary-search-trees
+33 instruction-pipelining-pipeline-hazards
+34 asymptotic-worst-case-time-and-space-complexity ?
+35 memory-interfacing-and-hierarchy
+36 propositional-and-first-order-logic
+37 propositional-and-first-order-logic
+38 graphs-connectivity-matching-colouring
+39 design-of-control-unit ?
+40 memory-interfacing-and-hierarchy ?
+41 sorting
+42 asymptotic-worst-case-time-and-space-complexity
+43 regular-and-context-free-languages-pumping-lemma
+44 regular-expressions-and-finite-automata
+45 concurrency-and-synchronization
+46 sql ?
+47 medium-access-control
+48 asymptotic-worst-case-time-and-space-complexity ?
+49 programming-in-c ?
+50 local-optimisation ?
+51 local-optimisation ?
+52 normal-forms
+53 normal-forms
+54 memory-management-and-virtual-memory
+55 memory-management-and-virtual-memory
+56 verbal-ability
+57 numerical-ability
+58 verbal-ability
+59 verbal-ability
+60 verbal-ability
+61 numerical-ability
+62 verbal-ability
+63 numerical-ability
+64 numerical-ability
+65 numerical-ability
