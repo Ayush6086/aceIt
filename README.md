@@ -4,6 +4,8 @@ Timed GATE Computer Science mock tests built from past papers, scored with the o
 
 **Live demo:** https://d10meumccwrsq5.cloudfront.net/ (sign up with an email address; no card, no ads)
 
+**Screen-recorded demo (1 min 39 s, with narration):** [docs/demo/aceIt_demo.mp4](docs/demo/aceIt_demo.mp4)
+
 ![Deployed architecture](docs/architecture.png)
 
 ## What is on AWS
